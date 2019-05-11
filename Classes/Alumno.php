@@ -6,8 +6,6 @@ class Alumno
     private $apellido;
     private $codigoAlumno;
 
-  }
-
 
   public function __construct(
     string $nombre,
@@ -16,9 +14,9 @@ class Alumno
     )
 
   {
-    this->nombre = $nombre;
-    this->apellido = $apellido;
-    this->codigoAlumno = $codigoAlumno;
+    $this->nombre = $nombre;
+    $this->apellido = $apellido;
+    $this->codigoAlumno = $codigoAlumno;
   }
 
   public function getNombre()
@@ -43,7 +41,7 @@ class Alumno
 
   public function getCodigoAlumno()
   {
-      return $this->CodigoAlumno;
+      return $this->codigoAlumno;
   }
 
   public function setCodigoAlumno($codigoAlumno)

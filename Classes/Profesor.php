@@ -1,11 +1,12 @@
 <?php
 
-class Profesor
-{
-  private $nombre;
-  private $apellido;
-  private $antiguedad;
-  private $codigoProfesor;
+//la hacemos abstract porque va a ser una clase padre y no se va a poder instanciar
+abstract class Profesor
+{//cambio los atributos de private a protected por ser ahora una clase abstracta
+  protected $nombre;
+  protected $apellido;
+  protected $antiguedad = 0;
+  protected $codigoProfesor;
 
 
 
@@ -13,15 +14,13 @@ class Profesor
   public function __construct(
     string $nombre,
     string $apellido,
-    int $antiguedad,
     int $codigoProfesor
     )
 
   {
-    this->nombre = $nombre;
-    this->apellido = $apellido;
-    this->antiguedad = $antiguedad;
-    this->codigoProfesor = $codigoProfesor;
+    $this->nombre = $nombre;
+    $this->apellido = $apellido;
+    $this->codigoProfesor = $codigoProfesor;
 
   }
 

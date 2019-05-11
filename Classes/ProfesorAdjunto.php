@@ -8,12 +8,11 @@ class ProfesorAdjunto extends Profesor
     public function __construct(
         string $nombre,
         string $apellido,
-        int $antiguedad = 0,
         int $codigoProfesor,
         int $horasConsulta
     )
     {
-        parent::__construct($nombre, $apellido, $antiguedad, $codigoProfesor);
+        parent::__construct($nombre, $apellido, $codigoProfesor, $horasConsulta);
         $this->horasConsulta = $horasConsulta;
     }
 
@@ -26,4 +25,4 @@ class ProfesorAdjunto extends Profesor
     {
         $this->horasConsulta = $horasConsulta;
     }
-} 
+}
